@@ -1,0 +1,13 @@
+/tramp
+/.emacs.desktop.lock
+/.emacs.desktop
+auto-backup/*
+.python-environments/*
+/ac-comphist.dat
+auto-save-list/*
+/ido.last
+/projectile-bookmarks.eld
+elpa/
+url/*
+var/*
+*~
