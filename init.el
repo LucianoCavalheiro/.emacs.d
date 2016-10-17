@@ -1,4 +1,9 @@
 
+
+(setq package-archives
+   '(("melpa" . "http://melpa.org/packages/")))
+
+
 (defvar my-packages
   '(ac-anaconda anaconda-mode ansible ansible-doc apache-mode auto-complete autopair
     cheatsheet color-theme company concurrent crontab-mode diffview direx
@@ -18,6 +23,7 @@
 
 (defun install-my-packages()
   (interactive)
+  (package-refresh-contents)
   (progn
     (dolist (p my-packages)
       (when (not (package-installed-p p))
