@@ -1,4 +1,10 @@
-
+;;
+;; PROXY SETTINGS
+;;
+;; (setq url-proxy-services
+;;    '(("no_proxy" . "\\(localhost\\|127\\.0\\.0\\.0/8\\|::1\\|10\\.0\\.0\\.0/8\\)")
+;;      ("https" . "127.0.0.1:3128")
+;;      ("http" . "127.0.0.1:3128")))
 
 (setq package-archives
    '(("melpa" . "http://melpa.org/packages/")))
