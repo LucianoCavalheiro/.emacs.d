@@ -29,6 +29,7 @@
       (when (not (package-installed-p p))
 	(package-install p))))
   )
+(install-my-packages)
 
 ;;-------------------------------------------------------------------------------------
 ;; GLOBALS
