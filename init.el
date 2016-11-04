@@ -20,7 +20,7 @@
     magit-popup markdown-mode nav-flash neotree nginx-mode org-beautify-theme ox-mediawiki
     pcache persistent-soft php-mode popup projectile pydoc python-environment pythonic
     python-mode pyvenv smartparens smartrep solarized-theme sort-words swiper systemd
-    ucs-utils web-mode websocket with-editor workgroups yaml-mode yasnippet )
+    ucs-utils web-mode websocket with-editor workgroups yaml-mode yasnippet origami fic-mode)
   "List of packages to install by default")
 
 
@@ -54,6 +54,9 @@
 ( global-set-key "\M-g" 'goto-line )
 ( global-hl-line-mode t)
 ( delete-selection-mode t)           ;; replace selection on paste
+
+(require 'origami)
+( define-key origami-mode-map (kbd "<C-tab>") 'origami-recursively-toggle-node )
 
 
 
@@ -165,8 +168,11 @@
   (smartparens-mode 1)
   (linum-mode 1)
   (ansible 1)
+  (origami-mode 1)
+  (fic-mode 1)
   (local-set-key (kbd "C-m")   'newline-and-indent)
   (local-set-key (kbd "C-c d") 'ansible-doc)
+  (local-set-key (kbd "<C-tab>") 'origami-recursively-toggle-node)
 )
 (add-hook 'yaml-mode-hook 'ansible-playbook-hook)
 
